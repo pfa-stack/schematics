@@ -1,0 +1,58 @@
+{
+  "name": "@pfa/schematics",
+  "version": "0.0.0-development",
+  "description": "Schematic to create an Angular builder",
+  "bugs": {
+    "url": "https://github.com/pfa-stack/schematics/issues"
+  },
+  "contributors": [
+    {
+      "name": "Emerson 'dungahk' Jair",
+      "email": "chat@dungahk.space",
+      "url": "https://dungahk.space"
+    }
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "homepage": "https://github.com/pfa-stack/schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "yarn build && jasmine src/**/*_spec.js",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once",
+    "commit": "git-cz"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "dungahk",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "7.0.3",
+    "@angular-devkit/schematics": "7.0.3"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.8.9",
+    "@types/node": "8.10.36",
+    "commitizen": "3.0.4",
+    "cz-conventional-changelog": "2.1.0",
+    "jasmine": "2.99.0",
+    "typescript": "3.1.3",
+    "semantic-release": "15.10.5",
+    "travis-deploy-once": "5.0.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfa-stack/schematics.git"
+  }
+}

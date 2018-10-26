@@ -1,0 +1,13 @@
+{
+  "title": "My builder title",
+  "description": "My builder description",
+  "type": "object",
+  "properties": {
+    "myProperty": {
+      "type": "string",
+      "description": "My property description",
+      "default": "all"
+    }
+  },
+  "required": ["myProperty"]
+}

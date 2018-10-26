@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "builder": {
+      "description": "A schematic to create an Angular builder",
+      "factory": "./builder",
+      "schema": "./builder/schema.json"
+    }
+  }
+}
