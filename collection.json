@@ -1,5 +1,5 @@
 {
-  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "builder": {
       "description": "A schematic to create an Angular builder",

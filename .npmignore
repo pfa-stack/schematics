@@ -1,0 +1,9 @@
+.editorconfig
+.gitignore
+.prettierignore
+.prettierrc
+.travis.yml
+CONTRIBUTING.md
+tsconfig.json
+yarn.lock
+*/**/*.ts

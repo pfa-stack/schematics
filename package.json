@@ -28,7 +28,7 @@
   ],
   "author": "dungahk",
   "license": "MIT",
-  "schematics": "./src/collection.json",
+  "schematics": "./collection.json",
   "dependencies": {
     "@angular-devkit/core": "7.0.3",
     "@angular-devkit/schematics": "7.0.3"
