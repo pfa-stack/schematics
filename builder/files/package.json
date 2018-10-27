@@ -9,7 +9,7 @@
     "@angular-devkit/architect": "~0.10.1",
     "@angular-devkit/build-webpack": "~0.10.1",
     "rxjs": "6.3.3",
-    "webpack": "4.19.1",
+    "webpack": "4.23.1",
     "webpack-node-externals": "1.7.2"
   },
   "devDependencies": {
