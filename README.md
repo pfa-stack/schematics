@@ -11,8 +11,8 @@ Schematic to create a new Angular builder.
 
 [![License](https://img.shields.io/npm/l/@pfa/schematics.svg)](https://github.com/pfa-stack/schematics/blob/master/LICENSE)
 
-| [Contributing](https://github.com/angular/angular-cli/blob/master/CONTRIBUTING.md) |
-| ---------------------------------------------------------------------------------- |
+| [Contributing](https://github.com/pfa-stack/schematics/blob/master/CONTRIBUTING.md) |
+| ----------------------------------------------------------------------------------- |
 
 
 ### Goal
