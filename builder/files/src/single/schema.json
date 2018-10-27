@@ -1,0 +1,13 @@
+{
+  "title": "Single Builder",
+  "description": "Single Builder description",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "A simple property"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["name"]
+}
