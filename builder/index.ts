@@ -7,7 +7,8 @@ import {
   mergeWith,
   // schematic,
   template,
-  url
+  url,
+  move
 } from '@angular-devkit/schematics';
 
 // Instead of `any`, it would make sense here to get a schema-to-dts package and output the
@@ -16,6 +17,10 @@ export default function(options: any): Rule {
   // The chain rule allows us to chain multiple rules and apply them one after the other.
   return chain([
     (_tree: Tree, context: SchematicContext) => {
+      if (options.path === undefined) {
+        options.path = `src/pfa`;
+      }
+
       // Show the options for this Schematics.
       context.logger.info('Builder Schematic: ' + JSON.stringify(options));
     },
@@ -44,9 +49,9 @@ export default function(options: any): Rule {
     mergeWith(
       apply(url('./files'), [
         template({
-          INDEX: options.index,
           name: options.name
-        })
+        }),
+        move(options.path)
       ])
     )
   ]);
