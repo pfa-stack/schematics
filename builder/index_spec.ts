@@ -1,26 +1,50 @@
 import { Tree } from '@angular-devkit/schematics';
 import { SchematicTestRunner } from '@angular-devkit/schematics/testing';
 import * as path from 'path';
+import { Schema } from './schema';
 
 // SchematicTestRunner needs an absolute path to the collection to test.
 const collectionPath = path.join(__dirname, '../collection.json');
 
 describe('builder', () => {
-  it('requires required option', () => {
-    // We test that
-    const runner = new SchematicTestRunner('schematics', collectionPath);
-    expect(() => runner.runSchematic('builder', {}, Tree.empty())).toThrow();
+  const builderName = 'my-builder';
+  const schematicName = 'builder';
+  const runner = new SchematicTestRunner('schematics', collectionPath);
+
+  it('should require required option', () => {
+    expect(() =>
+      runner.runSchematic(schematicName, {}, Tree.empty())
+    ).toThrow();
   });
 
-  it('works', () => {
-    const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = runner.runSchematic(
-      'builder',
-      { name: 'my-builder' },
+  it('should work with only a name', () => {
+    const tree = runner.runSchematic<Schema>(
+      schematicName,
+      { name: builderName },
       Tree.empty()
     );
 
-    // Listing files
-    expect(tree.files.sort()).toContain('/src/builders.json');
+    expect(tree.files).toContain(`/${builderName}/builders.json`);
+  });
+
+  it('should save to the path provided', () => {
+    const path = 'my-path';
+    const tree = runner.runSchematic<Schema>(
+      schematicName,
+      { name: builderName, path: path },
+      Tree.empty()
+    );
+
+    expect(tree.files).toContain(`/${path}/builders.json`);
+  });
+
+  it('should generate 13 files', () => {
+    const tree = runner.runSchematic<Schema>(
+      schematicName,
+      { name: builderName },
+      Tree.empty()
+    );
+
+    expect(tree.files.length).toEqual(13);
   });
 });
