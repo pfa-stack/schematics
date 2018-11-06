@@ -18,3 +18,40 @@ Schematic to create a new Angular builder.
 ### Goal
 
 Make it easier for starters to develop their own builders.
+
+### Usage
+
+In order to use the schematics to generate the builder, you can use [npx](https://www.npmjs.com/package/npx) or [pnpx](https://pnpm.js.org/docs/en/pnpx-cli.html):
+
+```sh
+npx \ # pnpx
+  -p @angular-devkit/schematics-cli \
+  -p @pfa/schematics \
+  schematics @pfa/schematics:builder --name="my-builder" --path="my-builder-path"
+```
+
+Or you can install both packages globally and run the schematics cli:
+
+```sh
+npm i -g @angular-devkit/schematics-cli @pfa/schematics
+
+schematics @pfa/schematics:builder --name="my-builder" --path="my-builder-path"
+```
+
+Or if you are using `yarn`:
+
+```sh
+yarn global add @angular-devkit/schematics-cli @pfa/schematics
+
+schematics @pfa/schematics:builder --name="my-builder" --path="my-builder-path"
+```
+
+Or even if you are using `pnpm`:
+
+```sh
+pnpm install --global @angular-devkit/schematics-cli @pfa/schematics
+
+schematics @pfa/schematics:builder --name="my-builder" --path="my-builder-path"
+```
+
+Running those commands will create a directory with the name you provided with the `path` option, if you didn't, it will use the `name` option as the directory name.
