@@ -38,13 +38,13 @@ describe('builder', () => {
     expect(tree.files).toContain(`/${path}/builders.json`);
   });
 
-  it('should generate 13 files', () => {
+  it('should generate 14 files', () => {
     const tree = runner.runSchematic<Schema>(
       schematicName,
       { name: builderName },
       Tree.empty()
     );
 
-    expect(tree.files.length).toEqual(13);
+    expect(tree.files.length).toEqual(14);
   });
 });
