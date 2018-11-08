@@ -1,10 +1,10 @@
 import { normalize } from '@angular-devkit/core';
 import { TestLogger } from '@angular-devkit/architect/testing';
-import SingleBuilder, { SingleBuilderOptions } from './single.builder';
+import SingleBuilder from './single.builder';
 
 describe('Single Builder', () => {
   let builder: SingleBuilder;
-  let testOptions: SingleBuilderOptions;
+  const testOptions = {};
 
   beforeEach(() => {
     builder = new SingleBuilder({
@@ -15,9 +15,6 @@ describe('Single Builder', () => {
       },
       architect: <any>{}
     });
-    testOptions = {
-      name: 'Single builder name'
-    };
   });
 
   it('should work', async () => {
