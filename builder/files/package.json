@@ -6,19 +6,18 @@
   "typings": "src/index.d.ts",
   "builders": "builders.json",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "test": "yarn build && jasmine ./**/*.spec.js"
   },
   "dependencies": {
     "@angular-devkit/architect": "~0.10.1",
     "@angular-devkit/build-webpack": "~0.10.1",
-    "rxjs": "6.3.3",
-    "webpack": "4.19.1",
-    "webpack-node-externals": "1.7.2"
+    "rxjs": "6.3.3"
   },
   "devDependencies": {
     "@types/jasmine": "2.8.9",
     "@types/node": "8.10.36",
-    "karma": "~3.1.1",
+    "jasmine": "2.99.0",
     "typescript": "3.1.3"
   }
 }
