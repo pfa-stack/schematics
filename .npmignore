@@ -6,4 +6,4 @@
 CONTRIBUTING.md
 tsconfig.json
 yarn.lock
-*/**/*.ts
+builder/*.ts
