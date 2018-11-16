@@ -28,14 +28,14 @@ describe('builder', () => {
   });
 
   it('should save to the path provided', () => {
-    const path = 'my-path';
+    const pathName = 'my-path';
     const tree = runner.runSchematic<Schema>(
       schematicName,
-      { name: builderName, path: path },
+      { name: builderName, path: pathName },
       Tree.empty()
     );
 
-    expect(tree.files).toContain(`/${path}/builders.json`);
+    expect(tree.files).toContain(`/${pathName}/builders.json`);
   });
 
   it('should generate 14 files', () => {

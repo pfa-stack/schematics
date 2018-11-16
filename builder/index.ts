@@ -1,11 +1,11 @@
 import {
-  Rule,
   apply,
   mergeWith,
-  template,
-  url,
   move,
-  SchematicsException
+  Rule,
+  SchematicsException,
+  template,
+  url
 } from '@angular-devkit/schematics';
 import { Schema as BuilderOptions } from './schema';
 
