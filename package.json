@@ -23,7 +23,8 @@
     "travis-deploy-once": "travis-deploy-once",
     "commit": "git-cz",
     "prettier": "prettier --config .prettierrc --ignore-path .prettierignore --list-different \"./*/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "coverage": "codecov"
   },
   "keywords": [
     "schematics"
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@types/jasmine": "2.8.9",
     "@types/node": "8.10.36",
+    "codecov": "^3.1.0",
     "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
     "jasmine": "2.99.0",
